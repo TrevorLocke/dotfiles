@@ -8,3 +8,39 @@
 	required = true
 [alias]
 	cmp = "!f() { git add -A && git commit -m \"$@\" && git push; }; f"
+	
+	# View the current working tree status using the short format
+	s = status -s
+	
+	# Show the diff between the latest commit and the current state
+	d = !"git diff-index --quiet HEAD -- || clear; git --no-pager diff --patch-with-stat"
+	
+	#git add and git commit
+	ac = !git add . && git commit -am
+	
+	#list aliases
+	la = "!git config -l | grep alias | cut -c 7-"
+	
+	#git log decorate 
+	ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
+	
+	#show history of file with diffs
+	fl = log -u
+	
+	#Show modified files in last commit:
+	dl = "!git ll -1"
+	
+	#Show a diff last commit:
+	dlc = diff --cached HEAD^
+	
+	#mark branch as done
+	done = "!f() { git branch | grep "$1" | cut -c 3- | grep -v done | xargs -I{} git branch -m {} done-{}; }; f"
+	
+	#stash list
+	sl = stash list
+	
+	#stash apply
+	sa = stash apply
+	
+	#stash save
+	ss = stash save
