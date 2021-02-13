@@ -1,0 +1,10 @@
+[user]
+	name = Trevor Locke
+	email = locke.trevor@gmail.com
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[alias]
+	cmp = "!f() { git add -A && git commit -m \"$@\" && git push; }; f"
