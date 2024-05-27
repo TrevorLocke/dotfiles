@@ -10,8 +10,6 @@ export ZSH="$HOME/.oh-my-zsh"
 CASE_SENSITIVE="true"
 ENABLE_CORRECTION="true"
 
-source $ZSH/oh-my-zsh.sh
-
 export EDITOR='nano'
 
 
