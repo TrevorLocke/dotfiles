@@ -1,6 +1,6 @@
 [user]
-	name = Trevor Locke
-	email = locke.trevor@gmail.com
+	name = TrevorLocke
+	email = locke.trevor@icloud.com
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
